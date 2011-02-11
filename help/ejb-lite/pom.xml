@@ -1,0 +1,53 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.glassfish.docs</groupId>
+	<artifactId>v3-docs</artifactId>
+        <version>3.0.1-SNAPSHOT</version>
+    </parent>
+    <groupId>org.glassfish.admingui</groupId>
+    <artifactId>console-ejb-lite-plugin-help</artifactId>
+    <packaging>hk2-jar</packaging>
+    <name>Administration Console EJB Lite Help Content</name>
+    <description>Online help content for the console-ejb-lite-plugin bundle.</description>
+
+    <developers>
+        <developer>
+            <id>pauldavies</id>
+            <name>Paul Davies</name>
+            <url>http://blogs.sun.com/techscribe</url>
+            <organization>Sun Microsystems, Inc.</organization>
+            <roles>
+                <role>developer</role>
+            </roles>
+        </developer>
+        <developer>
+            <id>chaase3</id>
+            <name>Kim Haase</name>
+            <url>http://blogs.sun.com/appserverwriters</url>
+            <organization>Sun Microsystems, Inc.</organization>
+            <roles>
+                <role>developer</role>
+            </roles>
+        </developer>
+    </developers>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <configuration>
+                    <instructions>
+                        <Export-Package />
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+        </resources>
+    </build>
+</project>

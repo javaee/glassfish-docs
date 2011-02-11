@@ -1,0 +1,43 @@
+
+asadmin Utility Subcommands                  delete-auth-realm(1)
+
+NAME
+     delete-auth-realm - removes the named authentication realm
+
+SYNOPSIS
+     delete-auth-realm [--help] auth_realm-name
+
+DESCRIPTION
+     The delete-auth-realm subcommand removes the named authenti-
+     cation  realm.  This  subcommand is supported in remote mode
+     only.
+
+OPTIONS
+     --help
+     -?
+
+         Displays the help text for the subcommand.
+
+OPERANDS
+     auth_realm_name             Name of the realm to be deleted.
+
+EXAMPLES
+     Example 1 Deleting an Authentication Realm
+
+     This example deletes the authentication realm db.
+
+       asadmin> delete-auth-realm db
+       Command delete-auth-realm executed successfully
+
+EXIT STATUS
+     0                           command executed successfully
+
+     1                           error in executing the command
+
+SEE ALSO
+     create-auth-realm(1), list-auth-realms(1)
+
+     asadmin(1M)
+
+Java EE 6          Last change: 28 August 2009                  1
+

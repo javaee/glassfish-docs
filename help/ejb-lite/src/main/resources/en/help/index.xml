@@ -1,0 +1,10 @@
+<index version="2.0">
+
+ <indexitem text="EJB container">
+    <indexitem target="ref-ejbgeneral" text="configuring EJB settings (reference)"></indexitem>
+    <indexitem target="task-ejbgeneral" text="configuring EJB settings (task)"></indexitem></indexitem>
+ <indexitem text="EJB settings">
+    <indexitem target="ref-ejbgeneral" text="configuring (reference)"></indexitem>
+    <indexitem target="task-ejbgeneral" text="configuring (task)"></indexitem>
+</indexitem>
+</index>

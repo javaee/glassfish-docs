@@ -1,0 +1,85 @@
+
+asadmin Utility Subcommands                create-audit-module(1)
+
+NAME
+     create-audit-module - adds an audit module
+
+SYNOPSIS
+     create-audit-module  --classname classname [--help]
+     [--property(name=value)[:name=value]*]
+     audit_module_name
+
+DESCRIPTION
+     The create-audit-module  subcommand  adds  the  named  audit
+     module for the Java class that implements the audit capabil-
+     ities. Audit modules collect and store information on incom-
+     ing  requests  (from,  for  example,  servlets  and EJB com-
+     ponents) and outgoing responses.
+
+     This subcommand is supported in remote mode only.
+
+OPTIONS
+     --classname
+
+         The name of the Java class that  implements  this  audit
+         module.  If  not  specified,  this  option  defaults  to
+         com.sun.enterprise.security.Audit.
+
+     --help
+     -?
+         Displays the help text for the subcommand.
+
+     --property
+
+         Optional keyword-value  pairs  that  specify  additional
+         properties for the audit module.
+                                                               TM
+         Audit module properties that are defined by  GlassFish
+         Server are as follows:
+
+         auditOn
+             If true, specifies that the audit module  is  loaded
+             and  called by the GlassFish Server audit library at
+             audit points.
+
+         Other available properties are determined by the  imple-
+         mentation of the audit module.
+
+     --target
+
+         Do not specify this option. This option is retained  for
+         compatibility  with  other releases. If you specify this
+
+Java EE 6          Last change: 28 August 2009                  1
+
+asadmin Utility Subcommands                create-audit-module(1)
+
+         option, a syntax error does not occur. Instead, the sub-
+         command  runs  successfully  and  the option is silently
+         ignored.
+
+OPERANDS
+     audit_module_name
+
+         The name of this audit module.
+
+EXAMPLES
+     Example 1 Creating an audit module
+
+       asadmin> create-audit-module
+        --classname com.sun.appserv.auditmodule
+       --property defaultuser=admin:Password=admin sampleAuditModule
+       Command create-audit-module executed successfully
+
+EXIT STATUS
+     0                           command executed successfully
+
+     1                           error in executing the command
+
+SEE ALSO
+     delete-audit-module(1), list-audit-modules(1)
+
+     asadmin(1M)
+
+Java EE 6          Last change: 28 August 2009                  2
+
